@@ -1,0 +1,20 @@
+{
+  "name": "varaey/strategy",
+  "type": "library",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Svitozar Kuzemskyi",
+      "email": "svetozarrambler@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "Varaey\\Strategy\\": "src/"
+    }
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.14"
+  }
+}
