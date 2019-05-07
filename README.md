@@ -1,19 +1,21 @@
 Sorter lib.
 ===============
 
-This is a sorter library. This library use stratefy pattern for sorting string or number array.
+This is a sorter library. This library use strategy pattern for sorting string or number array.
 
 Installation
 ------------
-
-For creating new project composer require varaey/strategy
 
 ```bash
 $ composer require varaey/strategy
 ```
 Next step is:
 
+Usage
+-----
 ~~~php
+<?php
+
 $array_char = ['f', 'a', 'b', 'd', 'c'];
 $array_number = [8, 3, 4, 7, 1, 2, 5, 9, 6];
 
@@ -25,19 +27,11 @@ echo $sort->Sort($array_number) .PHP_EOL;
 echo PHP_EOL;
 
 echo 'Start sorting (From Last to First)' . PHP_EOL;
-$sort->setStrategy(new StrategyLastToFirst());
+$sort->seStrategy(new StrategyLastToFirst());
 echo $sort->Sort($array_char) . PHP_EOL;
 echo $sort->Sort($array_number) . PHP_EOL;
 
 ~~~
-
-Usage
------
-
-Main steps that you need to do:
-~~~
-   ./bin/console 
-~~~ 
 
 License
 -------

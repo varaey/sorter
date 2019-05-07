@@ -19,7 +19,7 @@ class Sorter
         $this->strategy = $strategy;
     }
 
-    public function Sort(array $data)
+    public function Sort(array $data): string
     {
         $result = $this->strategy->manipulateData($data);
         if (is_array($result)) {
