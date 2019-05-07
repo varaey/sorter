@@ -19,17 +19,25 @@ Usage
 $array_char = ['f', 'a', 'b', 'd', 'c'];
 $array_number = [8, 3, 4, 7, 1, 2, 5, 9, 6];
 
+
 $sort = new Sorter(new StrategyFirstToLast());
-echo 'Start sorting (From First to Last)' . PHP_EOL;
-echo $sort->Sort($array_char) .PHP_EOL;
-echo $sort->Sort($array_number) .PHP_EOL;
+echo 'Start sorting (From First to Last)' . \PHP_EOL;
+\print_r($sort->sort($array_char));
+\print_r($sort->sort($array_number));
 
-echo PHP_EOL;
+echo \PHP_EOL;
 
-echo 'Start sorting (From Last to First)' . PHP_EOL;
-$sort->seStrategy(new StrategyLastToFirst());
-echo $sort->Sort($array_char) . PHP_EOL;
-echo $sort->Sort($array_number) . PHP_EOL;
+echo 'Start sorting (From Last to First)' . \PHP_EOL;
+$sort->setStrategy(new StrategyLastToFirst());
+\print_r($sort->sort($array_char));
+\print_r($sort->sort($array_number));
+
+echo \PHP_EOL;
+
+echo 'Start sorting (nulll object)' . \PHP_EOL;
+$sort->setStrategy(new NullObjectSort());
+\print_r($sort->sort($array_char));
+\print_r($sort->sort($array_number));
 
 ~~~
 
