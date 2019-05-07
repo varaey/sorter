@@ -1,5 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ * This file is part of the "varaey/sorter" package.
+ *
+ * (c) Svitozar kuzemskyi <svetozarrambler@@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace Varaey\Strategy;
 
@@ -7,8 +17,7 @@ class StrategyLastToFirst implements StrategyInterface
 {
     public function manipulateData(array $data): array
     {
-        // TODO: Implement manipulateData() method.
-        rsort($data);
+        \rsort($data);
 
         return $data;
     }

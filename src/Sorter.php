@@ -1,9 +1,17 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ * This file is part of the "varaey/sorter" package.
+ *
+ * (c) Svitozar kuzemskyi <svetozarrambler@@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace Varaey\Strategy;
-
-use http\Exception\InvalidArgumentException;
 
 class Sorter
 {
@@ -14,16 +22,13 @@ class Sorter
         $this->strategy = $strategy;
     }
 
-    public function setStrategy(StrategyInterface $strategy)
+    public function setStrategy(StrategyInterface $strategy): void
     {
         $this->strategy = $strategy;
     }
 
-    public function Sort(array $data): string
+    public function sort(array $data): array
     {
-        $result = $this->strategy->manipulateData($data);
-        if (is_array($result)) {
-            return implode(',', $result);
-        }
+        return $this->strategy->manipulateData($data);
     }
 }
